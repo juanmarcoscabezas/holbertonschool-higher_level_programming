@@ -25,7 +25,7 @@ int main(void)
 
     printf("-----------------\n");
 
-    insert_node(&head, 1);
+    printf("RETORNO - %p\n", (void *) insert_node(&head, -1000));
 
     print_listint(head);
 
