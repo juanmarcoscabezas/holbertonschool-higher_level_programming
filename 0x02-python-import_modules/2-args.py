@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    if len(sys.argv) == 1:
-        print("{:d} argument:".format(len(sys.argv)))
+    length = len(sys.argv) - 1
+    if length == 1:
+        print("{:d} argument:".format(length))
     else:
-        print("{:d} arguments:".format(len(sys.argv)))
+        print("{:d} arguments:".format(length))
     for i, arg in enumerate(sys.argv):
-        print("{:d}: {}".format(i + 1, arg))
+        if i > 0:
+            print("{:d}: {}".format(i + 1, arg))
