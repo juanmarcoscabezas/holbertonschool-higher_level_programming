@@ -10,4 +10,4 @@ if __name__ == "__main__":
         print("{:d} arguments:".format(length))
     for i, arg in enumerate(sys.argv):
         if i > 0:
-            print("{:d}: {}".format(i + 1, arg))
+            print("{:d}: {}".format(i, arg))
