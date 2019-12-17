@@ -30,16 +30,12 @@ int is_palindrome(listint_t **head)
 		end = start;
 		while (last < len && end->next)
 		{
-			printf("EN WHILE\n");
 			end = end->next;
 			last++;
 		}
-		printf("%d - %d\n", start->n, end->n);
 		if (start->n != end->n)
 			return (0);
-		printf("ANTES\n");
 		start = start->next;
-		printf("DESPUES");
 		first++;
 		len--;
 	}
