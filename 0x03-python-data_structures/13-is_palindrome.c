@@ -22,18 +22,24 @@ int is_palindrome(listint_t **head)
 		start = start->next;
 		len++;
 	}
-	while (first < last)
+	end = *head;
+	start = *head;
+	while (first < len)
 	{
-		last = 0;
+		last = first;
 		end = start;
-		while (last < len)
+		while (last < len && end->next)
 		{
+			printf("EN WHILE\n");
 			end = end->next;
 			last++;
 		}
+		printf("%d - %d\n", start->n, end->n);
 		if (start->n != end->n)
 			return (0);
+		printf("ANTES\n");
 		start = start->next;
+		printf("DESPUES");
 		first++;
 		len--;
 	}
