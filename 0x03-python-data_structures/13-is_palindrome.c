@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 	int len = 0, first = 0, last = 0;
 
 	if (!head || !*head)
-		return (0);
+		return (1);
 	end = *head;
 	start = *head;
 
