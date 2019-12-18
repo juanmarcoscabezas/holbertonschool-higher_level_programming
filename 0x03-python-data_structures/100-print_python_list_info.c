@@ -16,6 +16,6 @@ void print_python_list_info(PyObject *p)
 	for (i = 0; i < size; i++)
 	{
 		item = PyList_GET_ITEM(p, i);
-		printf("Element %d: %s\n", i, (char *) item->ob_type->tp_name);
+		printf("Element %d: %s\n", i, (char *) (Py_TYPE(item))->tp_name);
 	}
 }
