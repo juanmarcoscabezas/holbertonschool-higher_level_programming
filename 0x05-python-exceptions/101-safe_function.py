@@ -7,6 +7,6 @@ def safe_function(fct, *args):
         res = fct(*args)
     except BaseException as be:
         sys.stderr.write("Exception: %s\n" % be)
-        res =  None
+        res = None
     finally:
         return res
