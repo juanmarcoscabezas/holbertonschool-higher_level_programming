@@ -35,7 +35,8 @@ Testing with one float
     >>> add_integer(2.9999999999999999)
     101
 
-Testing with one string
+Testing error cases
 
     >>> add_integer("Holberton")
-    a must be an integer
+    Traceback (most recent call last):
+    TypeError: a must be an integer
