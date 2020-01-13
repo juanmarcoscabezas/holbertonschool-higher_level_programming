@@ -11,5 +11,31 @@ First import
 
 Now use it:
 
+Testing with one number.
+
     >>> add_integer(0)
     98
+
+    >>> add_integer(1)
+    99
+
+Testing with two numbers.
+
+    >>> add_integer(0, 90)
+    90
+
+    >>> add_integer(10, 60)
+    70
+
+Testing with one float
+
+    >>> add_integer(1.98)
+    99
+
+    >>> add_integer(2.9999999999999999)
+    101
+
+Testing with one string
+
+    >>> add_integer("Holberton")
+    a must be an integer
