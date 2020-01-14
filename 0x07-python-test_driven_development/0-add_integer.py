@@ -2,16 +2,17 @@
 
 
 """
-Module add-integer
-adds two integers
+Module add_integer
+Adds two integers
 
 """
 
 
 def add_integer(a, b=98):
 
-    """ This function returns the add of two ints
-        Throws and error if the values are not int or float
+    """This function returns the add of two ints
+
+       >>> add_integer(10, 20)
     """
 
     if type(a) is not int and type(a) is not float:
