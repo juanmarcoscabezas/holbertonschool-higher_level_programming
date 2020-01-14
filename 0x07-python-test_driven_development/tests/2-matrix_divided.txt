@@ -1,65 +1,45 @@
-The ``0-add_integer.py`` module
+The ``2-matrix_divided.py`` module
 ======================
 
-Using ``add_integer``
+Using ``matrix_divided``
 -------------------
 
 First import
-``fadd_integer`` from the ``0-add_integer.py`` module:
+``matrix_divided`` from the ``2-matrix_divided.py`` module:
 
-    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Now use it:
 
 Testing with one number.
 
-    >>> add_integer(1)
-    99
-
-    >>> add_integer(-1)
-    97
-
-Testing with two numbers.
-
-    >>> add_integer(0, 10)
-    10
-
-    >>> add_integer(-10, 20)
-    10
-
-Testing with two numbers.
-
-    >>> add_integer(0, 90)
-    90
-
-    >>> add_integer(10, 60)
-    70
+    >>> matrix_divided([[2, 2]], 2)
+    [[1.0, 1.0]]
 
 Testing with one float
 
-    >>> add_integer(1.98)
-    99
+    >>> matrix_divided([[2, 2]], 2.0)
+    [[1.0, 1.0]]
 
-    >>> add_integer(2.9999999999999999)
-    101
 
 Testing error cases
 
-    >>> add_integer("Holberton")
+    >>> matrix_divided("Holberton", 2)
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-    >>> add_integer(True)
+    >>> matrix_divided([[1, 3], [3, 5, 6]], "Hello")
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: Each row of the matrix must have the same size
 
-    >>> add_integer(1, "Holberton")
+    >>> matrix_divided([[1, 3], [3, 5]], "Hello")
     Traceback (most recent call last):
-    TypeError: b must be an integer
+    TypeError: div must be a number
 
-    >>> add_integer("Hola", "Mundo")
+    >>> matrix_divided([[1, 3], [3, 5]], 0)
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    ZeroDivisionError: division by zero
 
-
-
+    >>> matrix_divided([], 1)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
