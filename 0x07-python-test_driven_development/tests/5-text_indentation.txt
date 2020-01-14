@@ -1,0 +1,60 @@
+The ``5-text_indentation.py`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+First import
+``text_indentation`` from the ``5-text_indentation.py`` module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+Testing with one string.
+
+    >>> text_indentation("Juan")
+    Juan
+
+    >>> text_indentation("Juan, Cabezas")
+    Juan, Cabezas
+
+    >>> text_indentation("Juan.Cabezas")
+    Juan.
+    <BLANKLINE>
+    Cabezas
+
+    >>> text_indentation("Juan.       Cabezas")
+    Juan.
+    <BLANKLINE>
+    Cabezas
+
+    >>> text_indentation("Juan?Cabezas")
+    Juan?
+    <BLANKLINE>
+    Cabezas
+
+    >>> text_indentation("Juan?       Cabezas")
+    Juan?
+    <BLANKLINE>
+    Cabezas
+
+    >>> text_indentation("Juan:Cabezas")
+    Juan:
+    <BLANKLINE>
+    Cabezas
+
+    >>> text_indentation("Juan:       Cabezas")
+    Juan:
+    <BLANKLINE>
+    Cabezas
+
+Testing error cases
+
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    TypeError: text must be a string
