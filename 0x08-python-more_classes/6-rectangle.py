@@ -3,12 +3,12 @@
 
 class Rectangle:
 
-    __instances = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-        self.__instances += 1
+        Rectangle.number_of_instances += 1
 
     def __str__(self):
         result = ""
@@ -23,17 +23,13 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        self.__instances -= 1
+        Rectangle.number_of_instances -= 1
 
     def __repr__(self):
         result = "Rectangle("
         result += str(self.__width) + ", "
         result += str(self.__height) + ")"
         return result
-
-    @staticmethod
-    def number_of_instances():
-        print("HOLA")
 
     @property
     def width(self):
