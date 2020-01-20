@@ -2,4 +2,4 @@
 
 
 def lookup(obj):
-    print(dir(obj))
+    return dir(obj)
