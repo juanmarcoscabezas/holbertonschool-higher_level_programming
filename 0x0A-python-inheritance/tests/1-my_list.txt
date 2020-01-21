@@ -40,3 +40,12 @@ Testing error cases
     >>> my_list = MyList(1)
     Traceback (most recent call last):
     TypeError: 'int' object is not iterable
+
+    >>> my_list = MyList(float('nan'))
+    Traceback (most recent call last):
+    TypeError: 'float' object is not iterable
+
+    >>> my_list = MyList([1, 5, 4, 'a'])
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    TypeError: unorderable types: str() < int()
