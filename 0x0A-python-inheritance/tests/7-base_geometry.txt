@@ -5,7 +5,7 @@ Using ``BaseGeometry``
 -------------------
 
 First import
-``MyList`` from the ``7-base_geometry.py`` module:
+``MyList`` from the ``2-base_geometry.py`` module:
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -53,7 +53,3 @@ Testing error cases
     >>> bg.integer_validator("name")
     Traceback (most recent call last):
     TypeError: integer_validator() missing 1 required positional argument: 'value'
-
-    >>> bg.integer_validator()
-    Traceback (most recent call last):
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
