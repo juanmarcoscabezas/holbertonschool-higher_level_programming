@@ -18,22 +18,26 @@ Testing with one int.
 
 Testing with more ints.
 
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("meters", 10)
 
 Testing error cases
 
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("Age", 0)
     Traceback (most recent call last):
     ValueError: Age must be greater than 0
 
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("Age", -9)
     Traceback (most recent call last):
     ValueError: Age must be greater than 0
 
-    >>> bg = BaseGeometry()
     >>> bg.integer_validator("Age", "Hi")
     Traceback (most recent call last):
     TypeError: Age must be an integer
+
+    >>> bg.area()
+    Treaceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> bg.integer_validator("name")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
