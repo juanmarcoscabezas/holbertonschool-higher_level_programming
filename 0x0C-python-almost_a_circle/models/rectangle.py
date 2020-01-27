@@ -95,8 +95,9 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update object"""
+        size = 0
         for i, arg in enumerate(args):
             if i == 0:
                 self.id = arg
@@ -108,3 +109,16 @@ class Rectangle(Base):
                 self.x = arg
             if i == 4:
                 self.y = arg
+            size += 1
+        if size == 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
