@@ -19,6 +19,11 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        """overrifing str method"""
+        text = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
+        return text.format(self.id, self.x, self.y, self.width, self.height)
+
     @property
     def width(self):
         """width getter"""
