@@ -55,6 +55,6 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def width(self, value):
+    def y(self, value):
         """y setter"""
         self.__y = value
