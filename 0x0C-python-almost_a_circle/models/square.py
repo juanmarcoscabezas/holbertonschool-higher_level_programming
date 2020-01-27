@@ -17,5 +17,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """overrifing str method"""
-        text = "[Rectangle] ({:d}) {:d}/{:d} - {:d}"
+        text = "[Square] ({:d}) {:d}/{:d} - {:d}"
         return text.format(self.id, self.x, self.y, self.width, self.height)
