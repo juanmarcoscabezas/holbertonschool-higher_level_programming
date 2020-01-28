@@ -86,18 +86,18 @@ class ClassSquareTest(unittest.TestCase):
 
     def test_08(self):
         """test width"""
-        r = Square(1, 2)
+        r = Square(1)
         self.assertEqual(r.width, 1)
 
     def test_09(self):
         """test height"""
-        r = Square(1, 2)
+        r = Square(2)
         self.assertEqual(r.height, 2)
 
     def test_10(self):
         """test area"""
-        r = Square(3, 2)
-        self.assertEqual(r.area(), 6)
+        r = Square(3)
+        self.assertEqual(r.area(), 9)
 
     def test_11(self):
         """test set width"""
@@ -119,22 +119,22 @@ class ClassSquareTest(unittest.TestCase):
     def test_e14(self):
         """test x"""
         with self.assertRaises(ValueError):
-            r = Square(1, 1, -1, 1)
+            r = Square(1, -1, 1)
 
     def test_e15(self):
         """test y"""
         with self.assertRaises(ValueError):
-            r = Square(1, 1, 1, -1)
+            r = Square(1, 1, -1)
 
     def test_e16(self):
         """test x"""
         with self.assertRaises(TypeError):
-            r = Square(1, 1, None, 1)
+            r = Square(1, None, 1)
 
     def test_e17(self):
         """test x"""
         with self.assertRaises(TypeError):
-            r = Square(1, 1, 1, None)
+            r = Square(1, 1, None)
 
     def test_e18(self):
         """test width"""
@@ -144,47 +144,48 @@ class ClassSquareTest(unittest.TestCase):
     def test_e19(self):
         """test height"""
         with self.assertRaises(ValueError):
-            r = Square(1, 0)
+            r = Square(0)
 
     def test_14(self):
         """update 1"""
-        r = Square(1, 1, 1, 1)
+        r = Square(1, 1, 1)
         r.update(2)
         self.assertEqual(r.id, 2)
 
     def test_15(self):
         """update 2"""
-        r = Square(1, 1, 1, 1)
+        r = Square(1, 1, 1)
         r.update(2, 3)
         self.assertEqual(r.id, 2)
-        self.assertEqual(r. width, 3)
+        self.assertEqual(r.width, 3)
+        self.assertEqual(r.height, 3)
 
     def test_16(self):
+        """update 2"""
+        r = Square(1, 1, 1)
+        r.update(2, 3, 4)
+        self.assertEqual(r.id, 2)
+        self.assertEqual(r.width, 3)
+        self.assertEqual(r.height, 3)
+
+    def test_17(self):
         """update 2"""
         r = Square(1, 1, 1, 1)
         r.update(2, 3, 4)
         self.assertEqual(r.id, 2)
         self.assertEqual(r.width, 3)
-        self.assertEqual(r.height, 4)
+        self.assertEqual(r.height, 3)
+        self.assertEqual(r.x, 4)
 
-    def test_17(self):
+    def test_18(self):
         """update 2"""
         r = Square(1, 1, 1, 1)
         r.update(2, 3, 4, 5)
         self.assertEqual(r.id, 2)
         self.assertEqual(r.width, 3)
-        self.assertEqual(r.height, 4)
-        self.assertEqual(r.x, 5)
-
-    def test_18(self):
-        """update 2"""
-        r = Square(1, 1, 1, 1)
-        r.update(2, 3, 4, 5, 6)
-        self.assertEqual(r.id, 2)
-        self.assertEqual(r.width, 3)
-        self.assertEqual(r.height, 4)
-        self.assertEqual(r.x, 5)
-        self.assertEqual(r.y, 6)
+        self.assertEqual(r.height, 3)
+        self.assertEqual(r.x, 4)
+        self.assertEqual(r.y, 5)
 
     def test_19(self):
         """test x getter"""
