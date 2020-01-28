@@ -26,24 +26,30 @@ class ClassRectangleTest(unittest.TestCase):
 
     def test_02(self):
         """test height string"""
-        with self.assertRaises(TypeError): Rectangle(1, "Holberton")
+        with self.assertRaises(TypeError):
+            Rectangle(1, "Holberton")
 
     def test_03(self):
         """test height float"""
-        with self.assertRaises(TypeError): Rectangle(1, 1.4)
+        with self.assertRaises(TypeError):
+            Rectangle(1, 1.4)
 
     def test_04(self):
         """test height negative"""
-        with self.assertRaises(ValueError): Rectangle(1, -3)
+        with self.assertRaises(ValueError):
+            Rectangle(1, -3)
 
     def test_05(self):
         """test height None"""
-        with self.assertRaises(TypeError): Rectangle(1, None)
+        with self.assertRaises(TypeError):
+            Rectangle(1, None)
 
     def test_06(self):
         """test height dict"""
-        with self.assertRaises(TypeError): Rectangle(1, {'id': 7})
+        with self.assertRaises(TypeError):
+            Rectangle(1, {'id': 7})
 
     def test_04(self):
         """test height list"""
-        with self.assertRaises(TypeError): Rectangle(1, [1,2,3])
+        with self.assertRaises(TypeError):
+            Rectangle(1, [1, 2, 3])

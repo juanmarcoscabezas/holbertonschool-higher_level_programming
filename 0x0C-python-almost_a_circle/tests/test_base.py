@@ -51,5 +51,5 @@ class ClassBaseTest(unittest.TestCase):
 
     def test_04(self):
         """test id list"""
-        base = Base([1,2,3])
-        self.assertEqual(base.id, [1,2,3])
+        base = Base([1, 2, 3])
+        self.assertEqual(base.id, [1, 2, 3])
