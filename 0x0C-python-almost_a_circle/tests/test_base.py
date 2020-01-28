@@ -53,3 +53,7 @@ class ClassBaseTest(unittest.TestCase):
         """test id list"""
         base = Base([1, 2, 3])
         self.assertEqual(base.id, [1, 2, 3])
+
+    def test_08(self):
+        """test docstring"""
+        self.assertIsNotNone(Base.__doc__)

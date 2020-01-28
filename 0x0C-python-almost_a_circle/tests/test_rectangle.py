@@ -17,12 +17,12 @@ class ClassRectangleTest(unittest.TestCase):
     def test_00(self):
         """test success"""
         r = Rectangle(1, 1)
-        self.assertEqual(r.id, 12)
+        self.assertEqual(r.id, 13)
 
     def test_01(self):
         """test sucess"""
         r = Rectangle(1, 1)
-        self.assertEqual(r.id, 14)
+        self.assertEqual(r.id, 15)
 
     def test_02(self):
         """test height string"""
