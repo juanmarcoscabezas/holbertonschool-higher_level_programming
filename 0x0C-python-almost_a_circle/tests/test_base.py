@@ -49,7 +49,7 @@ class ClassBaseTest(unittest.TestCase):
         base = Base({'id': 7})
         self.assertEqual(base.id, {'id': 7})
 
-    def test_04(self):
+    def test_07(self):
         """test id list"""
         base = Base([1, 2, 3])
         self.assertEqual(base.id, [1, 2, 3])
