@@ -7,6 +7,7 @@ Base class
 
 import json
 import os
+import csv
 
 
 class Base:
@@ -61,5 +62,30 @@ class Base:
             with open(filename, 'r') as f:
                 result = cls.from_json_string(f.read())
                 return [cls.create(**r) for r in result]
+        else:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        filename = cls.__name__ + ".csv"
+        with open(filename, 'w') as csvfile:
+            fieldnames = list_objs[0].to_dictionary()
+            fieldnames = list(fieldnames)
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            [writer.writerow(obj.to_dictionary()) for obj in list_objs]
+
+    @classmethod
+    def load_from_file_csv(cls):
+        filename = cls.__name__ + ".csv"
+        if os.path.isfile(filename):
+            with open(filename, 'r') as csvfile:
+                reader = csv.DictReader(csvfile)
+                my_list = []
+                for row in reader:
+                    for key in row:
+                        row[key] = int(row[key])
+                    my_list.append(cls.create(**row))
+                return my_list
         else:
             return []
