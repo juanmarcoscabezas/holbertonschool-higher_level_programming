@@ -18,5 +18,8 @@ if __name__ == "__main__":
 
         session = Session(engine)
 
-        for instance in session.query(State).order_by(State.id)[0:1]:
-            print('{}: {}'.format(instance.id, instance.name))
+        result = session.query(State).order_by(State.id).first()
+        if result != None:
+            print('{}: {}'.format(result.id, result.name))
+        else:
+            print('Nothing')
