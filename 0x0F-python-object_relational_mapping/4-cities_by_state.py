@@ -15,7 +15,7 @@ if __name__ == '__main__':
             cursor = db.cursor()
             query = "SELECT c.id, c.name, s.name \
                      FROM cities AS c \
-                     RIGHT JOIN states as s \
+                     RIGHT JOIN states AS s \
                      ON c.state_id = s.id \
                      ORDER BY c.id ASC"
             cursor.execute(query)
