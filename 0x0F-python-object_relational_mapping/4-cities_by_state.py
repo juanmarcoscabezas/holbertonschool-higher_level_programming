@@ -17,7 +17,7 @@ if __name__ == '__main__':
                      FROM cities AS c \
                      RIGHT JOIN states as s \
                      ON c.state_id = s.id \
-                     ORDER BY id ASC"
+                     ORDER BY c.id ASC"
             cursor.execute(query)
 
             rows = cursor.fetchall()
