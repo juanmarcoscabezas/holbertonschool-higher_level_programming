@@ -10,7 +10,8 @@ if __name__ == '__main__':
         DATABASE = sys.argv[3]
 
         try:
-            db = MySQLdb.connect(host="localhost",port=3306,user=USER,passwd=PASSWD,db=DATABASE)
+            db = MySQLdb.connect(host="localhost", port=3306,
+                                 user=USER, passwd=PASSWD, db=DATABASE)
             cursor = db.cursor()
             cursor.execute("""SELECT * FROM states""")
             rows = cursor.fetchall()
