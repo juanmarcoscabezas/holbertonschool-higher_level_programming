@@ -1,5 +1,5 @@
 #!/bin/bash
 
 if [ $# -gt 0 ]; then
-	curl "$1"
+	curl -L "$1"
 fi
