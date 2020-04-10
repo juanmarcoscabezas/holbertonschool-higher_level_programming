@@ -1,5 +1,3 @@
 #!/bin/bash
-
-if [ $# -gt 0 ]; then
-	curl -s -X DELETE "$1"
-fi
+# sends a DELETE request and displays the body of the response
+curl -s -X DELETE "$1"

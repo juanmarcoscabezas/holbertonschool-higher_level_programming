@@ -1,5 +1,3 @@
 #!/bin/bash
-
-if [ $# -gt 0 ]; then
-	curl -si --stderr - "$1" | grep "Allow: " | cut -b 8-
-fi
+# displays all HTTP methods the server will accept.
+curl -si -X GET --stderr - "$1" | grep "Allow: " | cut -b 8-

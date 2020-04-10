@@ -1,5 +1,3 @@
 #!/bin/bash
-
-if [ $# -gt 0 ]; then
-	curl -sL "$1"
-fi
+# sends a GET request to the URL, and displays the body of the response
+curl -sL -X GET "$1"
