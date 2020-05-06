@@ -14,8 +14,8 @@ let newArray = process.argv;
 newArray.shift();
 newArray.shift();
 newArray = [...new Set(newArray)];
-let first = newArray[0];
-let second = newArray[1] === undefined ? first : newArray[1];
+let first = parseInt(newArray[0]);
+let second = newArray[1] === undefined ? first : parseInt(newArray[1]);
 
 if (first < second) {
   const aux = first;
