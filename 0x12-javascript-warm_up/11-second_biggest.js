@@ -10,23 +10,5 @@ if (process.argv.length < 4) {
   process.exit();
 }
 
-let newArray = process.argv;
-newArray.shift();
-newArray.shift();
-newArray = [...new Set(newArray)];
-let first = parseInt(newArray[0]);
-let second = newArray[1] === undefined ? first : parseInt(newArray[1]);
-
-if (first < second) {
-  const aux = first;
-  first = second;
-  second = aux;
-}
-
-newArray.forEach(val => {
-  if (parseInt(val) > first) {
-    second = first;
-    first = val;
-  }
-});
-console.log(second);
+const newArray = process.argv.sort((a, b) => (b - a));
+console.log(newArray[newArray.length - 2]);
