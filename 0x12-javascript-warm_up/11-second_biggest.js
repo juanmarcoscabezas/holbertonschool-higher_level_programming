@@ -10,8 +10,8 @@ if (process.argv.length < 4) {
   process.exit();
 }
 
-let first = process.argv[2];
-let second = process.argv[3];
+let first = parseInt(process.argv[2]);
+let second = parseInt(process.argv[3]);
 
 if (first < second) {
   const aux = first;
@@ -23,7 +23,7 @@ const newArray = process.argv;
 newArray.shift();
 newArray.shift();
 newArray.forEach(val => {
-  if (val > first) {
+  if (parseInt(val) > first) {
     second = first;
     first = val;
   }
