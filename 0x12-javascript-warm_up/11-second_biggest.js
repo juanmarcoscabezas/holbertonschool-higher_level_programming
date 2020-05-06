@@ -6,7 +6,7 @@ in the list of arguments
 */
 
 if (process.argv.length < 4) {
-  console.log(1);
+  console.log(0);
   process.exit();
 }
 
