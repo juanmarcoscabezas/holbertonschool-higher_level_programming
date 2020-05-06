@@ -10,5 +10,5 @@ if (process.argv.length < 4) {
   process.exit();
 }
 
-const newArray = process.argv.sort((a, b) => (b - a));
+const newArray = process.argv.sort((a, b) => (a - b));
 console.log(newArray[newArray.length - 2]);
