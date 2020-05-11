@@ -1,7 +1,11 @@
 #!/usr/bin/node
 
 function esrever (list) {
-  return list.reverse();
+  const newList = [];
+  list.forEach(element => {
+    newList.unshift(element);
+  });
+  return newList;
 }
 
 module.exports.esrever = esrever;
